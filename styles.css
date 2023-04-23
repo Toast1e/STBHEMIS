@@ -1,0 +1,56 @@
+/* Set body margin and padding to 0 */
+body {
+    margin: 1%;
+    padding:1%;
+    background-color: #F5F5F5;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+  /* Style the Hemis label */
+  #hemis {
+    float: right ;
+    width: 170px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  thead {
+    color: #54575a;
+    font-weight: 700;
+  }
+
+  td {
+    padding: 1% 0;
+    font-weight: 400;
+    color: #686c6e;
+  }
+
+  table, thead, td {
+    border-bottom: 1px solid rgb(226, 226, 226);
+    border-collapse: separate;
+    border-spacing: 30% 0;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #cacaca;
+      color: #606163;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+    }
+    
+    #myBtn:hover {
+      background-color: #a8a8a8;
+    }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HEMIS Calculator</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <!-- <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> -->
+  	<link rel="stylesheet" href="styles.css" >
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+	  <link rel="icon" type="image/x-icon" href="rainy_light_FILL0_wght400_GRAD0_opsz48.png">
+</head>
+<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Search Module or Module-code">
+  <!-- <div style="overflow-x:auto;"> -->
+	<table id="subjects-table">
+		<thead>
+			<tr>
+				<th>MODULE</th>
+				<th>CREDITS</th>
+				<th>TAKING</th>
+				<th>PASSED</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		<p id="hemis">HEMIS: </p>
+
+	</table>
+  <!-- </div> -->
+	<script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("subjects-table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+    
+		fetch('engData.json')
+		  .then(response => response.json())
+		  .then(data => {
+		    const tableBody = document.querySelector('#subjects-table tbody');
+		    let totalPassValue = 0;
+		    let totalTakingValue = 0;
+
+		    data.forEach((subject, index) => {
+		      const row = document.createElement('tr');
+		      const moduleCell = document.createElement('td');
+		      moduleCell.innerText = subject.id;
+		      row.appendChild(moduleCell);
+
+		      const kreditsCell = document.createElement('td');
+		      kreditsCell.innerText = subject.value;
+		      row.appendChild(kreditsCell);
+
+		      const takingCell = document.createElement('td');
+		      const takingCheckbox = document.createElement('input');
+		      takingCheckbox.type = 'checkbox';
+		      takingCheckbox.addEventListener('click', () => {
+		      	if (takingCheckbox.checked) {
+		      		passCheckbox.disabled = false;
+		      		totalTakingValue += parseInt(subject.value);
+		      	} else {
+		      		passCheckbox.disabled = true;
+		      		if (passCheckbox.checked) {
+		      			passCheckbox.checked = false;
+		      			totalPassValue -= parseInt(subject.value);
+		      		}
+		      		totalTakingValue -= parseInt(subject.value);
+		      	}
+		      	updateHemis();
+		      });
+		      takingCell.appendChild(takingCheckbox);
+		      row.appendChild(takingCell);
+
+		      const passCell = document.createElement('td');
+		      const passCheckbox = document.createElement('input');
+		      passCheckbox.type = 'checkbox';
+		      passCheckbox.disabled = true;
+		      passCheckbox.addEventListener('click', () => {
+		      	if (passCheckbox.checked) {
+		      		totalPassValue += parseInt(subject.value);
+		      	} else {
+		      		totalPassValue -= parseInt(subject.value);
+		      	}
+		      	updateHemis();
+		      });
+		      passCell.appendChild(passCheckbox);
+		      row.appendChild(passCell);
+
+		      if (index > 10) {
+			      tableBody.appendChild(row);
+		      } else {
+		      	tableBody.appendChild(row).style.display = 'none';
+		      }
+		    });
+
+		    function updateHemis() {
+    			const hemis = document.querySelector('#hemis');
+    		if (totalTakingValue > 0) {
+        		const hemisValue = (totalPassValue / totalTakingValue).toFixed(2);
+        			hemis.innerText = `HEMIS: ${hemisValue}`;
+    		} else {
+        		hemis.innerText = 'HEMIS: N/A';
+    		}
+}
+		  });
+
+		// Get the button
+			let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+  				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  	  				mybutton.style.display = "block";
+  				} else {
+    				mybutton.style.display = "none";
+  				}
+			}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+  			document.body.scrollTop = 0;
+  			document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
+</html>
