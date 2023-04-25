@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FZD93PD0K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Google Tag Manager -->
+		<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-5MWTT6K');</script>
+	<!-- End Google Tag Manager -->
 
-  gtag('config', 'G-7FZD93PD0K');
-</script>
+	<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FZD93PD0K"></script>
+			<script>
+  				window.dataLayer = window.dataLayer || [];
+  				function gtag(){dataLayer.push(arguments);}
+  				gtag('js', new Date());
+
+  				gtag('config', 'G-7FZD93PD0K');
+			</script>
 	
 <title>HEMIS Calculator</title>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
@@ -20,9 +29,73 @@
 	  <link rel="preconnect" href="https://fonts.googleapis.com">
 	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-	  <link rel="icon" type="image/x-icon" href="rainy_light_FILL0_wght400_GRAD0_opsz48.png">
+	  <link rel="icon" type="image/x-icon" href="pics/rainy_light_FILL0_wght400_GRAD0_opsz48.png">
 </head>
 <body>
+
+	<div class="popup-container">
+		<div class="popup-content">
+		  <!-- content of the popup goes here -->
+			<div>
+			<span>
+				How To:
+			</span>
+			<hr>
+			<h1><strong>TAKING:</strong></h1>
+			<ul>
+				<li>
+					<p>Select 
+						<strong>all</strong>
+						the 
+						<strong>modules</strong>
+						for your 
+						<strong>year</strong> 
+						by scrolling down or 
+						<strong>searching</strong> 
+						for them.
+					</p>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<p>
+						You can even search for the 
+						<strong>modules' code!</strong>
+					</p>
+				</li>
+			</ul>
+			<hr>
+			<h1><strong>PASSED:</strong></h1>
+			<ul>
+				<li>
+					<p>Select all the modules you have 
+						<strong>passed</strong> 
+						after your final exam in 
+						<strong>Second Semester</strong>
+					</p>
+				</li>
+			</ul>
+			</div>
+			<div>
+				<button class="btn" id="popup-close-btn">GOT IT</button>
+		  	</div>
+		  	<div class="btn-group">
+				<button class="btn1" id="">HEMIS?</button>
+				<button class="btn1" id="">More</button>
+		  	</div>
+		</div>
+		<div id="popup-tab">
+		</div>
+	</div>
+	  
+	  
+
+
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MWTT6K"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Search Module or Module-code">
@@ -30,10 +103,10 @@
 	<table id="subjects-table">
 		<thead>
 			<tr>
-				<th>MODULE</th>
-				<th>CREDITS</th>
-				<th>TAKING</th>
-				<th>PASSED</th>
+				<th>MODULE:  </th>
+				<th>CREDITS:  </th>
+				<th>TAKING:  </th>
+				<th>PASSED:  </th>
 			</tr>
 		</thead>
 		<tbody>
@@ -43,9 +116,7 @@
 	</table>
   <!-- </div> -->
   <script src="script.js"></script>
-	<!-- <script> -->
 
 
-	<!-- </script> -->
 </body>
 </html>

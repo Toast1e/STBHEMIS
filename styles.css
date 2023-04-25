@@ -27,6 +27,10 @@ body {
     color: #686c6e;
   }
 
+  th {
+    padding-right: 5px;
+  }
+
   table, thead, td {
     border-bottom: 1px solid rgb(226, 226, 226);
     border-collapse: separate;
@@ -42,8 +46,8 @@ body {
       font-size: 18px;
       border: none;
       outline: none;
-      background-color: #cacaca;
-      color: #606163;
+      background-color: #068B88;
+      color: #ffffff;
       cursor: pointer;
       padding: 15px;
       border-radius: 4px;
@@ -52,5 +56,103 @@ body {
     }
     
     #myBtn:hover {
-      background-color: #a8a8a8;
+      background-color: #067d7b;
     }
+
+    .popup-container {
+      position: fixed;
+      top: 0;
+      left: -300px; /* starts off-screen to the left */
+      width: 300px;
+      /* height: 80%; */
+      height: fit-content;
+      background-color: #068B88;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: left 0.5s ease-in-out;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 6%;
+      padding-bottom: 20px;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    .popup-content {
+      padding: 20px;
+      color: #FBFEF9;
+      text-align: center;
+    }
+    
+    #popup-tab {
+      position: fixed;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 100px;
+      background-color: #068B88;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      border-radius: 8px 0px 0px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: right 0.5s ease-in-out;
+    } 
+
+    #popup-tab span {
+      display: block;
+      transform: rotate(-90deg);
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+    }
+    
+    .popup-container.show {
+      left: 0;
+    }
+    
+    #popup-tab.show {
+      right: 0;
+    }
+
+    .btn {
+      background-color: #f44336;
+      font-size: 12px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      padding: 14px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #000000;
+      color: rgb(255, 255, 255);
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    }
+    .btn-group .btn1 {
+      font-size: 12px;
+      background-color: #000000;
+      border: none;
+      color: white;
+      padding: 14px 40px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      float: left;
+      width: 48%;
+      margin: 1%;
+    }
+
+    .btn1:hover {
+      background-color: #000000;
+      color: rgb(255, 255, 255);
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      
+    }
+    
