@@ -15,77 +15,79 @@ function myFunction() {
       }       
     }
   }
-      
-          fetch('engData.json')
-            .then(response => response.json())
-            .then(data => {
-              const tableBody = document.querySelector('#subjects-table tbody');
-              let totalPassValue = 0;
-              let totalTakingValue = 0;
-  
-              data.forEach((subject, index) => {
-                const row = document.createElement('tr');
-                const moduleCell = document.createElement('td');
-                moduleCell.innerText = subject.id;
-                row.appendChild(moduleCell);
-  
-                const kreditsCell = document.createElement('td');
-                kreditsCell.innerText = subject.value;
-                row.appendChild(kreditsCell);
-  
-                const takingCell = document.createElement('td');
-                const takingCheckbox = document.createElement('input');
-                takingCheckbox.type = 'checkbox';
-                takingCheckbox.addEventListener('click', () => {
-                    if (takingCheckbox.checked) {
-                        passCheckbox.disabled = false;
-                        totalTakingValue += parseInt(subject.value);
-                    } else {
-                        passCheckbox.disabled = true;
-                        if (passCheckbox.checked) {
-                            passCheckbox.checked = false;
-                            totalPassValue -= parseInt(subject.value);
-                        }
-                        totalTakingValue -= parseInt(subject.value);
-                    }
-                    updateHemis();
-                });
-                takingCell.appendChild(takingCheckbox);
-                row.appendChild(takingCell);
-  
-                const passCell = document.createElement('td');
-                const passCheckbox = document.createElement('input');
-                passCheckbox.type = 'checkbox';
-                passCheckbox.disabled = true;
-                passCheckbox.addEventListener('click', () => {
-                    if (passCheckbox.checked) {
-                        totalPassValue += parseInt(subject.value);
-                    } else {
-                        totalPassValue -= parseInt(subject.value);
-                    }
-                    updateHemis();
-                });
-                passCell.appendChild(passCheckbox);
-                row.appendChild(passCell);
-  
-                if (index > 10) {
-                    tableBody.appendChild(row);
-                } else {
-                    tableBody.appendChild(row).style.display = 'none';
-                }
-              });
-  
-              function updateHemis() {
-                  const hemis = document.querySelector('#hemis');
-              if (totalTakingValue > 0) {
-                  const hemisValue = (totalPassValue / totalTakingValue).toFixed(2);
-                      hemis.innerText = `HEMIS: ${hemisValue}`;
-              } else {
-                  hemis.innerText = 'HEMIS: N/A';
-              }
-  }
-            });
-  
+
+  fetch('engData.json')
+  .then(response => response.json())
+  .then(data => {
+    const tableBody = document.querySelector('#subjects-table tbody');
+    let totalPassValues = [0, 0, 0, 0];
+    let totalTakingValues = [0, 0, 0, 0];
+
+    data.forEach((subject, index) => {
+      const row = document.createElement('tr');
+      const moduleCell = document.createElement('td');
+      moduleCell.innerText = subject.id;
+      row.appendChild(moduleCell);
+
+      const kreditsCell = document.createElement('td');
+      kreditsCell.innerText = subject.value;
+      row.appendChild(kreditsCell);
+
+      const takingCell = document.createElement('td');
+      const takingCheckbox = document.createElement('input');
+      takingCheckbox.type = 'checkbox';
+      takingCheckbox.addEventListener('click', () => {
+        if (takingCheckbox.checked) {
+          passCheckbox.disabled = false;
+          totalTakingValues[subject.label - 1] += parseInt(subject.value);
+        } else {
+          passCheckbox.disabled = true;
+          if (passCheckbox.checked) {
+            passCheckbox.checked = false;
+            totalPassValues[subject.label - 1] -= parseInt(subject.value);
+          }
+          totalTakingValues[subject.label - 1] -= parseInt(subject.value);
+        }
+        updateHemis();
+      });
+      takingCell.appendChild(takingCheckbox);
+      row.appendChild(takingCell);
+
+      const passCell = document.createElement('td');
+      const passCheckbox = document.createElement('input');
+      passCheckbox.type = 'checkbox';
+      passCheckbox.disabled = true;
+      passCheckbox.addEventListener('click', () => {
+        if (passCheckbox.checked) {
+          totalPassValues[subject.label - 1] += parseInt(subject.value);
+        } else {
+          totalPassValues[subject.label - 1] -= parseInt(subject.value);
+        }
+        updateHemis();
+      });
+      passCell.appendChild(passCheckbox);
+      row.appendChild(passCell);
+
+      if (index > 10) {
+        tableBody.appendChild(row);
+      } else {
+        tableBody.appendChild(row).style.display = 'none';
+      }
+    });
+
+    function updateHemis() {
+      const hemis = document.querySelector('#hemis');
+      let totalHemisValue = 0;
+      for (let i = 0; i < 4; i++) {
+        if (totalTakingValues[i] > 0) {
+          const hemisValue = (totalPassValues[i] / totalTakingValues[i]).toFixed(2);
+          totalHemisValue += parseFloat(hemisValue);
+        }
+      }
+      hemis.innerText = `HEMIS: ${(totalHemisValue).toFixed(2)}`;
+    }
+  });
+
           // Get the button
               let mybutton = document.getElementById("myBtn");
   
@@ -126,4 +128,4 @@ function myFunction() {
             popupContainer.classList.add("show");
             popupTab.classList.remove("show");
           });
-          
+        
