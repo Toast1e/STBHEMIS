@@ -128,4 +128,67 @@ function myFunction() {
             popupContainer.classList.add("show");
             popupTab.classList.remove("show");
           });
-        
+
+// ----------------------collapseBtn-----------------------
+          
+//           const collapseBtn = document.getElementById('collapse-btn');
+//           const hiddenBtns = document.querySelector('.hidden-btns');
+          
+//           collapseBtn.addEventListener('click', () => {
+//             hiddenBtns.classList.toggle('show-btns');
+//           });
+              
+
+// // Load the checkbox data from a JSON file
+// function loadCheckboxData() {
+//   return fetch('endData.json')
+//     .then(response => response.json())
+//     .catch(error => {
+//       console.error('Failed to load checkbox data:', error);
+//       return {};
+//     });
+// }
+
+// // Function to save the state of all checkboxes
+// function saveCheckboxesState(checkboxData) {
+//   const checkboxStates = {};
+//   for (const id in checkboxData) {
+//     const checkbox = document.getElementById(id);
+//     if (checkbox) {
+//       checkboxStates[id] = checkbox.checked;
+//     }
+//   }
+//   localStorage.setItem('checkboxStates', JSON.stringify(checkboxStates));
+// }
+
+// // Function to load the state of all checkboxes
+// function loadCheckboxesState(checkboxData) {
+//   const checkboxStates = JSON.parse(localStorage.getItem('checkboxStates'));
+//   if (!checkboxStates) {
+//     return;
+//   }
+//   for (const id in checkboxData) {
+//     const checkbox = document.getElementById(id);
+//     if (checkbox) {
+//       checkbox.checked = checkboxStates[id];
+//     }
+//   }
+// }
+
+// // Function to clear all checkboxes and the saved state
+// function clearCheckboxesState(checkboxData) {
+//   for (const id in checkboxData) {
+//     const checkbox = document.getElementById(id);
+//     if (checkbox) {
+//       checkbox.checked = false;
+//     }
+//   }
+//   localStorage.removeItem('checkboxStates');
+// }
+
+// // Load the checkbox data and add event listeners to the buttons
+// loadCheckboxData().then(checkboxData => {
+//   document.getElementById('save-button').addEventListener('click', () => saveCheckboxesState(checkboxData));
+//   document.getElementById('load-button').addEventListener('click', () => loadCheckboxesState(checkboxData));
+//   document.getElementById('clear-button').addEventListener('click', () => clearCheckboxesState(checkboxData));
+// });

@@ -43,11 +43,11 @@
     padding-right: 70px;
     border-radius: 8px;
     color: #ffffff;
-  }
+}
   
-  .card.fullscreen {
+.card.fullscreen {
     text-align: left;
-    padding-top: 90px;
+    padding-top: 60px;
     margin: auto;
     /* set the card to fill the entire viewport */
     position: fixed;
@@ -57,12 +57,16 @@
     bottom: 0;
     /* add some styles for appearance */
     width: auto;
-    height: 100%;
+    height: auto;
     background-color: #068B88;
     z-index: 1;
     overflow: auto;
     color: #ffffff;
-  }
+}
+
+.card.fullscreen h1 {
+    font-size: larger;
+}
 
 .close-button {
     position: absolute;
@@ -87,21 +91,24 @@
     width: auto;
     margin-top: 2%;
     margin-left: 2%;
-  }
+}
 
-  .backbtn:hover {
+.backbtn:hover {
     background-color: #000000;
     color: rgb(255, 255, 255);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
-  }
+}
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .container {
         flex-direction: column;
     }
     .card {
         flex-basis: 100%;
+    }
+    .card {
+        font-size: larger;
     }
 }
