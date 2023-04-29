@@ -36,23 +36,24 @@ fetch('engData.json')
     const takingCell = document.createElement('td');
     const takingCheckbox = document.createElement('input');
     takingCheckbox.type = 'checkbox';
-    takingCheckbox.checked = JSON.parse(localStorage.getItem(`taking${subject.id}`)) || false;
     takingCheckbox.addEventListener('click', () => {
       if (takingCheckbox.checked) {
         passCheckbox.disabled = false;
         totalTakingValues[subject.label - 1] += parseInt(subject.value);
+        localStorage.setItem(`${subject.id}-taking`, true);
       } else {
         passCheckbox.disabled = true;
         if (passCheckbox.checked) {
           passCheckbox.checked = false;
           totalPassValues[subject.label - 1] -= parseInt(subject.value);
+          localStorage.removeItem(`${subject.id}-passed`);
         }
         totalTakingValues[subject.label - 1] -= parseInt(subject.value);
+        localStorage.removeItem(`${subject.id}-taking`);
       }
-      localStorage.setItem('totalTakingValues', JSON.stringify(totalTakingValues));
-      localStorage.setItem(`taking${subject.id}`, takingCheckbox.checked);
       updateHemis();
     });
+
     takingCell.appendChild(takingCheckbox);
     row.appendChild(takingCell);
 
@@ -60,17 +61,28 @@ fetch('engData.json')
     const passCheckbox = document.createElement('input');
     passCheckbox.type = 'checkbox';
     passCheckbox.disabled = true;
-    passCheckbox.checked = JSON.parse(localStorage.getItem(`pass${subject.id}`)) || false;
     passCheckbox.addEventListener('click', () => {
       if (passCheckbox.checked) {
         totalPassValues[subject.label - 1] += parseInt(subject.value);
+        localStorage.setItem(`${subject.id}-passed`, true);
       } else {
         totalPassValues[subject.label - 1] -= parseInt(subject.value);
+        localStorage.removeItem(`${subject.id}-passed`);
       }
-      localStorage.setItem('totalPassValues', JSON.stringify(totalPassValues));
-      localStorage.setItem(`pass${subject.id}`, passCheckbox.checked);
       updateHemis();
     });
+
+    if (localStorage.getItem(`${subject.id}-taking`) === 'true') {
+      takingCheckbox.checked = true;
+      passCheckbox.disabled = false;
+      totalTakingValues[subject.label - 1] += parseInt(subject.value);
+    }
+
+    if (localStorage.getItem(`${subject.id}-passed`) === 'true') {
+      passCheckbox.checked = true;
+      totalPassValues[subject.label - 1] += parseInt(subject.value);
+    }
+
     passCell.appendChild(passCheckbox);
     row.appendChild(passCell);
 
@@ -81,76 +93,13 @@ fetch('engData.json')
   }
 });
 
-      // Load from local storage if available
-    if (localStorage.getItem('subjects')) {
-      const storedSubjects = JSON.parse(localStorage.getItem('subjects'));
-      storedSubjects.forEach((storedSubject) => {
-        const subject = data.find((s) => s.id === storedSubject.id);
-        if (subject) {
-          const row = document.createElement('tr');
+updateHemis();
 
-          const moduleCell = document.createElement('td');
-          moduleCell.innerText = subject.id;
-          row.appendChild(moduleCell);
-
-          const kreditsCell = document.createElement('td');
-          kreditsCell.innerText = subject.value;
-          row.appendChild(kreditsCell);
-
-          const takingCell = document.createElement('td');
-          const takingCheckbox = document.createElement('input');
-          takingCheckbox.type = 'checkbox';
-          takingCheckbox.addEventListener('click', () => {
-            if (takingCheckbox.checked) {
-              passCheckbox.disabled = false;
-              totalTakingValues[subject.label - 1] += parseInt(subject.value);
-              localStorage.setItem('subjects', JSON.stringify(getSubjects()));
-            } else {
-              passCheckbox.disabled = true;
-              if (passCheckbox.checked) {
-                passCheckbox.checked = false;
-                totalPassValues[subject.label - 1] -= parseInt(subject.value);
-                localStorage.setItem('subjects', JSON.stringify(getSubjects()));
-              }
-              totalTakingValues[subject.label - 1] -= parseInt(subject.value);
-              localStorage.setItem('subjects', JSON.stringify(getSubjects()));
-            }
-            updateHemis();
-          });
-          takingCheckbox.checked = storedSubject.taking;
-          takingCell.appendChild(takingCheckbox);
-          row.appendChild(takingCell);
-
-          const passCell = document.createElement('td');
-          const passCheckbox = document.createElement('input');
-          passCheckbox.type = 'checkbox';
-          passCheckbox.disabled = !storedSubject.taking;
-          passCheckbox.checked = storedSubject.passed;
-          passCheckbox.addEventListener('click', () => {
-            if (passCheckbox.checked) {
-              totalPassValues[subject.label - 1] += parseInt(subject.value);
-              localStorage.setItem('subjects', JSON.stringify(getSubjects()));
-            } else {
-              totalPassValues[subject.label - 1] -= parseInt(subject.value);
-              localStorage.setItem('subjects', JSON.stringify(getSubjects()));
-            }
-            updateHemis();
-          });
-          passCell.appendChild(passCheckbox);
-          row.appendChild(passCell);
-
-          tableBody.appendChild(row);
-        }
-      });
-    }
-
-    updateHemis();
-
-    function getSubjects() {
-      const subjects = [];
-      data.forEach((subject) => {
-        const row = tableBody.querySelector(`tr td:first-child:contains(${subject.id})`).parentNode;
-        if (row) {
+function getSubjects() {
+  const subjects = [];
+  data.forEach((subject) => {
+    const row = tableBody.querySelector(`tr td:first-child:contains(${subject.id})`).parentNode;
+    if (row) {
           const takingCheckbox = row.querySelector('input[type="checkbox"]:first-child');
           const passCheckbox = row.querySelector('input[type="checkbox"]:last-child');
           const subjectData = {
@@ -175,14 +124,6 @@ fetch('engData.json')
       }
       hemis.innerText = `HEMIS: ${(totalHemisValue).toFixed(2)}`;
     }
-
-
-
-
-
-
-
-  
 
           const popupContainer = document.querySelector(".popup-container");
           const popupCloseBtn = document.querySelector("#popup-close-btn");
