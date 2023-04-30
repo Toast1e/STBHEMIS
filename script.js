@@ -1,3 +1,24 @@
+const popupContainer = document.querySelector(".popup-container");
+const popupCloseBtn = document.querySelector("#popup-close-btn");
+const popupTab = document.querySelector("#popup-tab");
+
+// show popup when page loads
+window.onload = function() {
+  popupContainer.classList.add("show");
+};
+
+// close popup when close button is clicked
+popupCloseBtn.addEventListener("click", function() {
+  popupContainer.classList.remove("show");
+  popupTab.classList.add("show");
+});
+
+// show popup again when tab is clicked
+popupTab.addEventListener("click", function() {
+  popupContainer.classList.add("show");
+  popupTab.classList.remove("show");
+});
+
 function myFunction() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
