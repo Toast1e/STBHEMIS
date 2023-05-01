@@ -108,17 +108,7 @@
         "id": "Chemistry C 224 ",		
         "label": "2",		
         "value": "15"	
-    },
-    {		
-        "id": "Engineering Mathematics 214 ",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
-        "id": "Practical Workshop Training 211 ",		
-        "label": "2",		
-        "value": "0"	
-    },
+    },		
     {		
         "id": "Thermodynamics A 224",		
         "label": "2",		
@@ -140,24 +130,9 @@
         "value": "15"	
     },
     {		
-        "id": "Engineering Mathematics 242 ",		
-        "label": "2",		
-        "value": "8"	
-    },
-    {		
         "id": "Engineering Statistics 243",		
         "label": "2",		
         "value": "15"	
-    },
-    {		
-        "id": "Numerical Methods 262 ",		
-        "label": "2",		
-        "value": "8"	
-    },
-    {		
-        "id": "Internship (Eng) 392*",		
-        "label": "3",		
-        "value": "0"	
     },
     {		
         "id": "Internship (Eng) 393*",		
@@ -180,11 +155,6 @@
         "value": "8"	
     },
     {		
-        "id": "Complementary Studies (Eng) 311",		
-        "label": "3",		
-        "value": "4"	
-    },
-    {		
         "id": "Heat Transfer A 326 ",		
         "label": "3",		
         "value": "15"	
@@ -193,11 +163,6 @@
         "id": "Particle Technology 316 ",		
         "label": "3",		
         "value": "15"	
-    },
-    {		
-        "id": "Philosophy and Ethics 314",		
-        "label": "3",		
-        "value": "4"	
     },
         {		
         "id": "Chemical Engineering 344 ",		
@@ -253,11 +218,6 @@
         "id": "Mineral Processing 415",		
         "label": "4",		
         "value": "15"	
-    },
-            {		
-        "id": "Project Management 412 ",		
-        "label": "4",		
-        "value": "12"	
     },
             {		
         "id": "Design Project 488 ",		
@@ -317,16 +277,6 @@
             {		
         "id": "Vacation Training 241",		
         "label": "2",		
-        "value": "0"	
-    },
-            {		
-        "id": "Internship (Eng) 392",		
-        "label": "3",		
-        "value": "0"	
-    },
-            {		
-        "id": "Internship (Eng) 393",		
-        "label": "3",		
         "value": "0"	
     },
             {		
@@ -395,11 +345,6 @@
         "value": "15"	
     },
     {		
-        "id": "Philosophy and Ethics 414",		
-        "label": "4",		
-        "value": "4"	
-    },
-    {		
         "id": "Project Management 412",		
         "label": "4",		
         "value": "12"	
@@ -450,11 +395,6 @@
         "value": "15"	
     },
     {		
-        "id": "Engineering Mathematics 214 ",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
         "id": "Mathematical Statistics 214",		
         "label": "2",		
         "value": "16"	
@@ -490,19 +430,9 @@
         "value": "15"	
     },
     {		
-        "id": "Computer Systems 245 ",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
         "id": "Data Engineering 245",		
         "label": "2",		
         "value": "12"	
-    },
-    {		
-        "id": "Engineering Mathematics 242",		
-        "label": "2",		
-        "value": "8"	
     },
     {		
         "id": "Mathematical Statistics 245",		
@@ -515,24 +445,9 @@
         "value": "8"	
     },
     {		
-        "id": "Numerical Methods 262",		
-        "label": "2",		
-        "value": "8"	
-    },
-    {		
         "id": "Systems and Signals 244 ",		
         "label": "2",		
         "value": "15"	
-    },
-    {		
-        "id": "Internship (Eng) 392",		
-        "label": "3",		
-        "value": "0"	
-    },
-    {		
-        "id": "Internship (Eng) 393",		
-        "label": "3",		
-        "value": "0"	
     },
     {		
         "id": "Control Systems 314",		
@@ -568,11 +483,6 @@
         "id": "Computer Science 315",		
         "label": "3",		
         "value": "16"	
-    },
-    {		
-        "id": "Design (E) 314 ",		
-        "label": "3",		
-        "value": "15"	
     },
         {		
         "id": "Mathematical Statistics 312",		
@@ -615,11 +525,6 @@
         "value": "16"	
     },
     {		
-        "id": "Data Analytics (Eng) 344",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
         "id": "Data Engineering 344",		
         "label": "3",		
         "value": "15"	
@@ -630,37 +535,12 @@
         "value": "16"	
     },
     {		
-        "id": "Operations Research (Eng) 345",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
         "id": "High Frequency Technique 414 ",		
         "label": "4",		
         "value": "15"	
     },
     {		
-        "id": "Philosophy and Ethics 414",		
-        "label": "4",		
-        "value": "4"	
-    },
-    {		
-        "id": "Project Management 412 ",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
         "id": "Systems and Signals 414 ",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Telecommunication 414 ",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Computer Systems 414",		
         "label": "4",		
         "value": "15"	
     },
@@ -676,21 +556,6 @@
     },
     {		
         "id": "Computer Science (E) 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Philosophy and Ethics 414",		
-        "label": "4",		
-        "value": "4"	
-    },
-    {		
-        "id": "Project Management 412",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
-        "id": "Systems and Signals 414",		
         "label": "4",		
         "value": "15"	
     },
@@ -725,55 +590,10 @@
         "value": "4"	
     },
     {		
-        "id": "Project Management 412 ",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
-        "id": "Computer Systems 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Control Systems 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Data Analytics (Eng) 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Computer Science (E) 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
         "id": "Control Systems 414",		
         "label": "4",		
         "value": "15"	
     },        
-    {		
-        "id": "Philosophy and Ethics 414",		
-        "label": "4",		
-        "value": "4"	
-    },
-    {		
-        "id": "Project Management 412",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
-        "id": "Systems and Signals 414",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Computer Systems 414",		
-        "label": "4",		
-        "value": "15"	
-    },
     {		
         "id": "Electronics 414",		
         "label": "4",		
@@ -790,24 +610,9 @@
         "value": "15"	
     },
     {		
-        "id": "Operations Research (Eng) 415 ",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
         "id": "Optimisation (Eng) 414",		
         "label": "4",		
         "value": "15"	
-    },
-    {		
-        "id": "Philosophy and Ethics 414",		
-        "label": "4",		
-        "value": "4"	
-    },
-    {		
-        "id": "Project Management 412",		
-        "label": "4",		
-        "value": "12"	
     },
     {		
         "id": "Complementary Studies (Eng) 441+",		
@@ -824,11 +629,6 @@
         "label": "4",		
         "value": "15"	
     },
-    {		
-        "id": "Environmental Engineering 442**",		
-        "label": "4",		
-        "value": "8"	
-    },
         {		
         "id": "Project (E) 448 ",		
         "label": "4",		
@@ -843,16 +643,6 @@
         "id": "Engineering Economics 212",		
         "label": "2",		
         "value": "8"	
-    },
-    {		
-        "id": "Engineering Mathematics 214",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
-        "id": "Practical Workshop Training 211 ",		
-        "label": "2",		
-        "value": "0"	
     },
     {		
         "id": "Production Management 212",		
@@ -875,17 +665,7 @@
         "value": "15"	
     },
     {		
-        "id": "Engineering Mathematics 242",		
-        "label": "2",		
-        "value": "8"	
-    },
-    {		
         "id": "Manufacturing Processes 244 ",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
-        "id": "Material Science A 244 ",		
         "label": "2",		
         "value": "15"	
     },
@@ -898,16 +678,6 @@
         "id": "Internship (Eng) 392*",		
         "label": "3",		
         "value": "0"	
-    },
-    {		
-        "id": "Internship (Eng) 393*",		
-        "label": "3",		
-        "value": "0"	
-    },
-    {		
-        "id": "Complementary Studies (Eng) 311+",		
-        "label": "3",		
-        "value": "4"	
     },
     {		
         "id": "Control Systems 314 ",		
@@ -925,19 +695,9 @@
         "value": "15"	
     },
     {		
-        "id": "Philosophy and Ethics 314*",		
-        "label": "3",		
-        "value": "4"	
-    },
-    {		
         "id": "Production Management 314",		
         "label": "3",		
         "value": "15"	
-    },
-    {		
-        "id": "Technical Communication 311** +",		
-        "label": "3",		
-        "value": "4"	
     },
     {		
         "id": "Data Analytics (Eng) 344",		
@@ -990,19 +750,9 @@
         "value": "15"	
     },
     {		
-        "id": "Project Management 412 ",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
         "id": "Enterprise Design 444 ",		
         "label": "4",		
         "value": "15"	
-    },
-    {		
-        "id": "Environmental Engineering 442*",		
-        "label": "4",		
-        "value": "8"	
     },
     {		
         "id": "Industrial Practice 442 ",		
@@ -1030,11 +780,6 @@
         "value": "15"	
     },
     {		
-        "id": "Engineering Mathematics 214 ",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
         "id": "Strength of Materials 224",		
         "label": "2",		
         "value": "15"	
@@ -1048,11 +793,6 @@
         "id": "Practical Workshop Training 211",		
         "label": "2",		
         "value": "0"	
-    },
-    {		
-        "id": "Engineering Mathematics 242 ",		
-        "label": "2",		
-        "value": "8"	
     },
     {		
         "id": "Fluid Mechanics 244",		
@@ -1070,11 +810,6 @@
         "value": "15"	
     },
     {		
-        "id": "Numerical Methods 262",		
-        "label": "2",		
-        "value": "8"	
-    },
-    {		
         "id": "Strength of Materials W 244 ",		
         "label": "2",		
         "value": "15"	
@@ -1084,31 +819,6 @@
         "label": "2",		
         "value": "0"	
     },        
-    {		
-        "id": "Internship (Eng) 392*",		
-        "label": "3",		
-        "value": "0"	
-    },
-    {		
-        "id": "Internship (Eng) 393*",		
-        "label": "3",		
-        "value": "0"	
-    },
-    {		
-        "id": "Complementary Studies (Eng) 311+",		
-        "label": "3",		
-        "value": "4"	
-    },
-    {		
-        "id": "Electrical Drive Systems 324 ",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
-        "id": "Philosophy and Ethics 314*",		
-        "label": "3",		
-        "value": "4"	
-    },
     {		
         "id": "Machine Design A 314 ",		
         "label": "3",		
@@ -1135,11 +845,6 @@
         "value": "18"	
     },
     {		
-        "id": "Data Analytics (Eng) 344+",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
         "id": "Machine Design B 344",		
         "label": "3",		
         "value": "15"	
@@ -1153,12 +858,7 @@
         "id": "Vacation Training 341",		
         "label": "3",		
         "value": "0"	
-    },
-    {		
-        "id": "Vibration and Noise 354",		
-        "label": "3",		
-        "value": "12"	
-    },       
+    },     
     {		
         "id": "Mechanical Project 478",		
         "label": "4",		
@@ -1168,22 +868,7 @@
         "id": "Energy Systems M 434 ",		
         "label": "4",		
         "value": "15"	
-    },        
-    {		
-        "id": "Heat Transfer A 414 ",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Mechatronics 424",		
-        "label": "4",		
-        "value": "15"	
-    },
-    {		
-        "id": "Project Management 412",		
-        "label": "4",		
-        "value": "12"	
-    },    
+    },          
     {		
         "id": "Finite Element Methods 414",		
         "label": "4",		
@@ -1205,38 +890,9 @@
         "value": "15"	
     },
     {		
-        "id": "Environmental Engineering 442*",		
-        "label": "4",		
-        "value": "8"	
-    },
-    {		
-        "id": "Introductory Systems Engineering 444",		
-        "label": "4",		
-        "value": "15"	
-    },        {		
-        "id": "Production Management 444 ",		
-        "label": "4",		
-        "value": "12"	
-    },
-    {		
-        "id": "Vacation Training 441 ",		
-        "label": "4",		
-        "value": "0"	
-    },
-    {		
         "id": "Finite Element Methods 474**",		
         "label": "4",		
         "value": "15"	
-    },
-    {		
-        "id": "Internship (Eng) 392*",		
-        "label": "3",		
-        "value": "0"	
-    },
-    {		
-        "id": "Internship (Eng) 393*",		
-        "label": "3",		
-        "value": "0"	
     },
     {		
         "id": "Complementary Studies (Eng) 311+",		
@@ -1269,26 +925,6 @@
         "value": "18"	
     },
     {		
-        "id": "Technical Communication 311**+",		
-        "label": "3",		
-        "value": "4"	
-    },
-    {		
-        "id": "Computer Systems 245",		
-        "label": "2",		
-        "value": "15"	
-    },
-    {		
-        "id": "Control Systems 354 ",		
-        "label": "3",		
-        "value": "18"	
-    },
-    {		
-        "id": "Data Analytics (Eng) 344+",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
         "id": "Electronics 245",		
         "label": "2",		
         "value": "15"	
@@ -1314,16 +950,6 @@
         "value": "45"	
     },
     {		
-        "id": "Design (E) 314",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
-        "id": "Electronics 315",		
-        "label": "3",		
-        "value": "15"	
-    },
-    {		
         "id": "Heat Transfer A 414 ",		
         "label": "4",		
         "value": "15"	
@@ -1332,11 +958,6 @@
         "id": "Mechatronics 424",		
         "label": "4",		
         "value": "15"	
-    },
-    {		
-        "id": "Project Management 412",		
-        "label": "4",		
-        "value": "12"	
     },
     {		
         "id": "Environmental Engineering 442*",		
