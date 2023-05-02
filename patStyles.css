@@ -77,6 +77,28 @@ hr {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
   }
+  .productbackbtn {
+    background-color: #f44336;
+    font-size: 12px;
+    background-color: #068B88;
+    border: none;
+    color: white;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    width: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+    .productbackbtn:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  }
 
   .mediaLink {
     width: 30px;
