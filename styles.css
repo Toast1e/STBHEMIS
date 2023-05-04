@@ -73,7 +73,7 @@ body {
       transition: left 0.5s ease-in-out;
       border-radius: 8px;
       text-align: center;
-      margin-top: 6%;
+      margin-top: 1%;
       padding-bottom: 20px;
       color: #ffffff;
       font-family: 'Open Sans', sans-serif;
@@ -113,6 +113,10 @@ body {
     
     #popup-tab.show {
       right: 0;
+    }
+
+    .legal {
+      color: #555;
     }
 
     .btn {
