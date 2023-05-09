@@ -37,6 +37,7 @@ body {
     border-collapse: separate;
     border-spacing: 30% 0;
     text-align: center;
+    border-right: 2px solid rgb(234, 234, 234);
     }
 
     #myBtn {
