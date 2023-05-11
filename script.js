@@ -2,6 +2,53 @@ const popupContainer = document.querySelector(".popup-container");
 const popupCloseBtn = document.querySelector("#popup-close-btn");
 const popupTab = document.querySelector("#popup-tab");
 
+document.addEventListener("DOMContentLoaded", function() {
+  var overlay = document.getElementById("overlay-notice");
+  var popupContainer = document.getElementById("popup-container-notice");
+  var closeButton = document.getElementById("close-button-notice");
+  
+  var hasAccepted = localStorage.getItem("ACCEPTED");
+  
+  if (hasAccepted === null) {
+    // Show the popup and overlay if the user hasn't accepted it before
+    overlay.style.display = "block";
+    popupContainer.style.display = "block";
+  } else {
+    // If the user has already accepted, show the popup every week
+    setInterval(function() {
+      overlay.style.display = "block";
+      popupContainer.style.display = "block";
+    }, 604800000);
+  }
+  
+  closeButton.addEventListener("click", function() {
+    // Store the fact that the user has accepted and hide the popup and overlay
+    localStorage.setItem("ACCEPTED", true);
+    overlay.style.display = "none";
+    popupContainer.style.display = "none";
+    
+    // If the user has accepted, show the popup every week
+    setInterval(function() {
+      overlay.style.display = "block";
+      popupContainer.style.display = "block";
+    }, 604800000);
+  });
+  
+  // Hide the overlay if the user has already accepted the popup before
+  if (hasAccepted === "true") {
+    overlay.style.display = "none";
+  }
+});
+
+
+
+
+
+
+
+
+
+
 // show popup when page loads
 window.onload = function() {
   popupContainer.classList.add("show");
@@ -19,23 +66,23 @@ popupTab.addEventListener("click", function() {
   popupTab.classList.remove("show");
 });
 
-// function myFunction() {
-//   var input, filter, table, tr, td, i;
-//   input = document.getElementById("myInput");
-//   filter = input.value.toUpperCase();
-//   table = document.getElementById("subjects-table");
-//   tr = table.getElementsByTagName("tr");
-//   for (i = 0; i < tr.length; i++) {
-//     td = tr[i].getElementsByTagName("td")[0];
-//     if (td) {
-//       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//         tr[i].style.display = "";
-//       } else {
-//         tr[i].style.display = "none";
-//       }
-//     }       
-//   }
-// }
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("subjects-table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 
 fetch('engData.json')
 .then(response => response.json())
