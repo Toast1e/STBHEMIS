@@ -84,7 +84,7 @@ function myFunction() {
   }
 }
 
-fetch('engData.json')
+fetch('sorted_engData.json')
 .then(response => response.json())
 .then(data => {
   const tableBody = document.querySelector('#subjects-table tbody');
