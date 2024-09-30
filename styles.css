@@ -7,15 +7,18 @@ body {
     width: auto;
     }
 
-  /* Style the Hemis label */
-  #hemis {
-    float: right ;
-    width: 170px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
+/* Style the Hemis label */
+#hemis {
+  position: fixed;
+  right: 0;
+  top: 20px;
+  width: 170px;
+  text-align: center;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 
   thead {
     color: #54575a;
