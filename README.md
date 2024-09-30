@@ -2,16 +2,16 @@
 <sub>Not Affiliated With SU </sub>
 
 
-📊 Overview
-The HEMIS Calculator is a very simple and lightweight tool designed to automate Higher Education Management Information System (HEMIS) calculations. 
-It streamlines the awkward calculations needed for calculating credits.
+📊 Overview<br>
+The HEMIS Calculator is a very simple and lightweight tool designed to automate Higher Education Management Information System (HEMIS) calculations. <br>
+It streamlines the awkward calculations needed for calculating credits.<br>
 
-🚀 Features
-Accurate Calculations: HEMIS calculations are accurate till 2023.
-User-Friendly Interface: Simplifies complex calculations into an easy-to-use interface.
-Fast Performance: It is a very small and simple web-based program with instant calculations.
-Local Storage: Results and previously selected modules are stored locally in the browser.
+🚀 Features<br>
+Accurate Calculations: HEMIS calculations are accurate till 2023.<br>
+User-Friendly Interface: Simplifies complex calculations into an easy-to-use interface.<br>
+Fast Performance: It is a very small and simple web-based program with instant calculations.<br>
+Local Storage: Results and previously selected modules are stored locally in the browser.<br>
 
-🔧 Technologies Used
-Programming Language: HTML / CSS / JS / JSON
-Database: Local Storage
+🔧 Technologies Used<br>
+Programming Language: HTML / CSS / JS / JSON<br>
+Database: Local Storage<br>
